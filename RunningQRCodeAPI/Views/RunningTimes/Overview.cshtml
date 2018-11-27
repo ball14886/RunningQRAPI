@@ -1,0 +1,30 @@
+﻿@model List<RunningQRCodeAPI.Models.RunnerStartEndTime>
+@{
+    ViewBag.Title = "ภาพรวม";
+}
+<table class="table table-bordered table-hover">
+    <tr>
+        <td colspan="4" align="right"><button onclick="location.href='@Url.Action("ExportListFromTsv", "RunningTimes")'">Export เป็น Excel</button>
+    </tr>
+    <tr>
+        <td>รหัสประจำตัว</td>
+        <td>เวลาเริ่ม</td>
+        <td>เวลาจบ</td>
+        <td>รวมเวลาที่ใช้</td>
+    </tr>
+    @foreach (var runner in Model)
+    {
+        <tr>
+            <td>@runner.RunnerIdentification</td>
+            <td>@runner.RunnerStartTime</td>
+            <td>@runner.RunnerEndTime</td>
+            <td>@runner.RunnerTotalRunningTime</td>
+        </tr>
+    }
+</table>
+
+<script>
+    function exportExcel() {
+        location.href = '<%: Url.Action("ExportListFromTsv", "RunningTimes") %>';
+    }
+</script>

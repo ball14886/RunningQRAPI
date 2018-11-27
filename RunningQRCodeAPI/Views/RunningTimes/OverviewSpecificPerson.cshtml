@@ -1,0 +1,33 @@
+﻿@model RunningQRCodeAPI.Models.RunnerStartEndTime
+@{
+    ViewBag.Title = "ดูข้อมูลรายคน";
+}
+
+<table>
+    <tr>
+        <td align="center" colspan="2">
+            <h1>@Model.RunnerIdentification</h1>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            เวลาเริ่ม
+            <span style="display:inline-block; width: 10px;" />
+        </td>
+        <td>@Model.RunnerStartTime</td>
+    </tr>
+    <tr>
+        <td align="right">
+            เวลาจบ
+            <span style="display:inline-block; width: 10px;" />
+        </td>
+        <td>@Model.RunnerEndTime</td>
+    </tr>
+    <tr>
+        <td align="right">
+            ใช้เวลาทั้งหมด
+            <span style="display:inline-block; width: 10px;" />
+        </td>
+        <td>@Model.RunnerTotalRunningTime</td>
+    </tr>
+</table>

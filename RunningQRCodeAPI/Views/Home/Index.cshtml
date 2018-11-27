@@ -1,0 +1,53 @@
+﻿<h1>QR Generator</h1><br/><br/>
+<table class="table">
+    <tr>
+        <td width="200px" align="right">
+            Width and Height
+            <span style="display:inline-block; width: 10px;" />
+        </td>
+        <td width="400px">
+            <input width="400" id="widthHeight" type="text" />
+        </td>
+    </tr>
+    <tr>
+        <td width="200px" align="right">
+            Save file at
+            <span style="display:inline-block; width: 10px;" />
+        </td>
+        <td width="400px">
+            <input width="400" id="folderSelector" class="auto-style1" name="folderSelector" title="folderSelector" type="file" />
+        </td>
+    </tr>
+    <tr>
+        <td width="200" align="right">
+
+        </td>
+        <td width="400px">
+            <asp:button id="generateButton" formaction="@Url.Action("GenerateQR","Location")">Generate QR Codes</asp:button>
+        </td>
+</tr>
+</table>
+
+<script>
+    //function submit() {
+    //    //Set the value you gonna pass
+    //    var PersonName = "some thing";
+
+    //    //encode it in a jQuery Object
+    //    var dataValue = { "name": PersonName };
+
+    //    //Make an jQuery AJAX call to asynchronously load the text box at run time
+    //    $.ajax({
+    //        type: "POST",
+    //        url: "Index.aspx/OnSubmit",
+    //        data: JSON.stringify(dataValue), //Pass the jQuery Object you created above as a query string parameter so that the server side C# code might process it
+    //        success: function (data) {
+    //            $(‘txtBoxToBePopulated’).html(data);  //Set the value of that textbox you want to get polulated which has id  = txtBoxToBePopulated
+    //        },
+    //        error: function (XMLHttpRequest, textStatus, errorThrown) {
+    //            alert("Request: " + XMLHttpRequest.toString() + "\n\nStatus: " + textStatus + "\n\nError: " + errorThrown);
+    //        }
+    //    });
+
+    //}
+</script>

@@ -1,0 +1,56 @@
+﻿@model RunningQRCodeAPI.Models.ScanResult
+@{
+    ViewBag.Title = "บันทึกเวลา";
+}
+
+@if (Model.Result.IsSuccess)
+{
+    <table class="table">
+        <tr>
+            <td align="center" colspan="2">
+                <h2>บันทึกเวลาสำเร็จ</h2>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">
+                <h1>@Model.RecordTime.RunnerIdentification</h1>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                เวลาเริ่ม
+                <span style="display:inline-block; width: 10px;" />
+            </td>
+            <td>@Model.RecordTime.RunnerStartTime</td>
+        </tr>
+        <tr>
+            <td align="right">
+                เวลาจบ
+                <span style="display:inline-block; width: 10px;" />
+            </td>
+            <td>@Model.RecordTime.RunnerEndTime</td>
+        </tr>
+        <tr>
+            <td align="right">
+                ใช้เวลาทั้งหมด
+                <span style="display:inline-block; width: 10px;" />
+            </td>
+            <td>@Model.RecordTime.RunnerTotalRunningTime</td>
+        </tr>
+    </table>
+}
+else
+{
+    <table>
+        <tr>
+            <td align="center" colspan="2">
+                <h2>บันทึกเวลาล้มเหลว</h2>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">
+                <h1>@Model.RecordTime.RunnerIdentification</h1>
+            </td>
+        </tr>
+    </table>
+}

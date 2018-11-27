@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="RunningQR" Class="RunningDatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=runningqrcode.database.windows.net;Initial Catalog=RunningQR;Persist Security Info=True;User ID=jirasin" SettingsObjectName="RunningQRCodeAPI.Properties.Settings" SettingsPropertyName="RunningQRConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.RunnerScanDateTime" Member="RunnerScanDateTimes">
+    <Type Name="RunnerScanDateTime">
+      <Column Name="RunnerScanDateTimeID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RunnerIdentification" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ScannedDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
